@@ -1,0 +1,72 @@
+@import "../../styles/colors.scss";
+@import "../../styles/scss.scss";
+
+.page {
+    background: $secondary-bg-color-1;
+    border-radius: 20px;
+
+    &__statusBar {
+        @include flexProperties(row, space-between, center, $fullWidth: true);
+        padding: 15px;
+
+        &__title {
+            color: $base-text-color;
+            font-weight: bold;
+        }
+
+        &__action {
+            @include normalThemeButton(16px, 10px);
+            @include fontSize(16px);
+            padding: 5px 20px !important;
+            width: 139px;
+            height: 40px;
+            // background: $secondary-bg-color-2  !important;
+            // border-radius: 50px !important;
+        }
+    }
+
+    &__actionBar {
+        padding: 10px 15px;
+
+        &__search {
+            background: transparent;
+            border-bottom: 2px solid #a9a9a9 !important;
+            outline: none;
+            padding: 10px 20px 10px 10px;
+            color: $base-text-color;
+            border-radius: 0px;
+            border: none;
+            font-size: 16px;
+        }
+    }
+
+    &__table {
+        padding: 20px;
+        background: $secondary-bg-color-1;
+
+        &__head {
+            background: $secondary-bg-color-1 !important;
+            color: $base-text-color !important;
+            @include fontSize(15px);
+        }
+       
+        &__row {
+            background: $secondary-bg-color-1 !important;
+            color: $base-text-color !important;
+            @include fontSize(16px);
+            
+            &__placement {
+                @include flexProperties(row, flex-start, center, $fullWidth: false);   
+                gap: 15px;
+
+                &__artist_image {
+                    width: 50px !important;
+                    height: 50px !important;
+                }
+            }
+            &__icon {
+                cursor: pointer;
+            }
+        }
+    }
+}

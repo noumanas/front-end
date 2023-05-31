@@ -1,0 +1,27 @@
+$base-gradient-color: linear-gradient(90deg, #0970A4 20%, hsl(337, 100%, 26%));
+$drawer-gradient-color: linear-gradient(70deg, rgba(1, 0, 42, 1) 45%, rgba(64, 1, 50, 1) 100%);
+$component-gradient-color: transparent linear-gradient(137deg, #0078AC 0%, #870033F2 100%) 0% 0% no-repeat padding-box;
+$component-box-gradient-color: transparent linear-gradient(220deg, #016DA7 20%, #870033F2 100%) 0% 0% no-repeat padding-box;
+$profile-gradient-color: linear-gradient(118deg, #DE3870 0%, #5CC2EF 100%) 0% 0% no-repeat padding-box;
+$base-content-app-bg: radial-gradient(#1e0918, #060219);
+$base-text-color: #fff;
+$text-color: #858997;
+$tablecell-color: #858997;
+$contract-btn: #267dff;
+$secondary-text-color: #675d5c;
+$primary-header-color: #100000;
+$secondary-bg-color-1: #2F3443;
+$secondary-bg-color-1-darken: #000019;
+$secondary-bg-color-2: #EC1086;
+$secondary-bg-color-3: #00CD98;
+
+// $secondary-bg-color-3: #1976d2;
+$secondary-bg-color-4: grey;
+$circle-box-primary-gradient-color: linear-gradient(90deg, #36A1FF, #0A1230);
+$circle-box-secondary-gradient-color: linear-gradient(117deg, #016DA7 86%, #870033F2 100%);
+$primary-shadow-color: #2F3443;
+$white-glass: rgba(255, 255, 255, .1);
+
+@function darkenColor($color) {
+  @return darken($color, 30%);
+}

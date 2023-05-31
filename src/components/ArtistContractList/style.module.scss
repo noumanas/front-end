@@ -1,0 +1,176 @@
+@import "../../styles/scss.scss";
+@import "../../styles/colors.scss";
+
+.page {
+    margin-top: 20px;
+    // overflow: hidden;
+   
+    &__list {
+        overflow-y: scroll;
+        height: 572px;
+        max-height: 572px;
+        // max-width: 100%;
+        &__ul {
+            // height: 415px;
+            // overflow: auto;
+            // list-style: none;
+            // padding: 0;
+            // margin: 0;
+
+            &__li {
+                // @include flexProperties(row, space-between, center, $fullWidth: true);
+                // gap: 30px;
+                // border-bottom: 1px solid rgba(255, 255, 255, .2);
+                // padding: 20px;
+                // cursor: pointer;
+
+                // &:last-child {
+                //     border-bottom: none;
+                // }
+
+                &__name {
+                    font-size: 15px;
+                    line-height: 25px;
+                    text-transform: capitalize;
+                    letter-spacing: 0px;
+                    color: $base-text-color;
+                    font-weight: normal;
+                    @include textEllipsisLineClamp(2)
+                }
+                &__tracktype{
+                    font-size: 15px;
+                    line-height: 25px;
+                    text-transform: capitalize;
+                    letter-spacing: 0px;
+                    color: $base-text-color;
+                    font-weight: normal;
+                }
+            }
+        }
+
+        &__loader {
+            @include flexProperties(column, center, center, $fullWidth: true);
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+.table {
+    background: #2f3443 !important;
+    // overflow: scroll;
+    height: 570px;
+    &__head {
+        position: sticky;
+        z-index: 1;
+        
+    }
+
+    &__brow {
+        tr {
+            &:nth-child(even) {
+                background-color: #383e51 !important;
+            }
+    
+            &:nth-child(odd) {
+                background-color: #40475a !important;
+            }
+        }
+    }
+    &__col {
+        color: white !important;
+        background: #2f3443 !important;
+        text-align: left !important;
+        width: 50px !important;
+        border-bottom: 1px solid #474D5E;
+        // font-weight: bold !important;
+ 
+        @include textEllipsis();
+        &__last{
+            color: white !important;
+            background: #2F3443 !important;
+            text-align: center !important;
+        }
+        &__lastdays{
+            color: rgb(145, 144, 144) !important;
+            background: #2F3443 !important;
+            text-align: center !important;
+            font-size: 9px;
+        }
+    }
+
+    &__row {
+        color: #d6d6d6 !important;
+        border-bottom: 0px !important;
+        // text-align: center !important;
+        max-width: 500px;
+        padding-top: 12px !important;
+        padding-bottom: 12px !important;
+
+       
+       
+        &__green {
+            color: green;
+        }
+
+        &__red {
+            color: red
+        }
+
+        &__icon {
+            cursor: pointer;
+        }
+
+        &__artistname {
+            // font-weight: bold;
+            font-size: 16px;
+            
+        }
+        &__href {
+            text-decoration: none;
+        }
+        &__href:hover {
+            color: palevioletred;
+        }
+
+
+        &__name {
+            display: flex;
+            width: 200px;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        &__sosi{
+            // width: 10%;
+            font-size: 12px;
+        }
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .page {
+        &__list {
+            max-width: 325px;
+            &__ul {
+                &__li {
+                   @include flexProperties(row, space-between, center, $fullWidth: true);
+                gap: 30px;
+                    &__name {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+    .table {
+        // &__col {
+
+        // }
+        overflow-x: scroll;
+
+        &__row {
+            &__sosi{
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+@import "../../styles/scss.scss";
+
+.table {
+    background: #2F3443 !important;
+
+    &__col {
+        color: white !important;
+        background: #2f3443 !important;
+        @include textEllipsis()
+    }
+
+    &__row {
+        color: #d6d6d6 !important;
+        // text-align: center !important;
+
+        
+
+        &__editbutton {
+            @media screen and (max-width: 1540px) {
+                transform: translateX(-15px);
+            }
+        }
+
+        img {
+            transform: translateX(-15px);
+        }
+        
+        &__green {
+            color: green;
+        }
+
+        &__red {
+            color: red
+        }
+
+        &__icon {
+            cursor: pointer;
+        }
+
+        &__name {
+            display: flex;
+            width: 200px;
+            justify-content: flex-start;
+            align-items: center;
+        }
+    }
+}

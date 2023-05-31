@@ -1,0 +1,24 @@
+.mainMenu {
+    padding-top: 0 !important;
+    background: #2F3443;
+    
+    &__button {
+        padding: 0px 0px!important;
+    }
+    
+    &__list {
+        margin-top: 0px;
+        padding: 4px 0px !important;
+        font-family: 'DM Sans' !important;
+        
+        &:last-child {
+            margin-top: 80px;
+        }
+        &:first-child {
+            margin-top: 50px;
+        }
+        &__image {
+            height: 20px;
+        }
+    }
+}

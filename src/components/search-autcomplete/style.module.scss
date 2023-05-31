@@ -1,0 +1,65 @@
+@import "../../styles/scss.scss";
+@import "../../styles/colors.scss";
+.container {
+    position: relative;
+    &__search_box {
+        width: 100%;
+        position: relative;
+        padding-bottom: 30px;
+
+        &__search_input {
+            width: 100%;
+            color: white !important;
+            // border: 1px solid #36a1ff !important;
+            background: transparent;
+            outline: none;
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 8px;
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid #a9a9a9;
+            outline: none;
+            padding: 10px;
+            color: $base-text-color;
+            border-radius: 0px;
+        }
+
+        &__search_icon {
+            position: absolute;
+            right: 20px;
+            top: 13px;
+        }
+    }
+
+    &__list {
+        position: absolute;
+        z-index: 2;
+        top: 55px;
+        list-style: none;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        background: $secondary-bg-color-1;
+        // background: #020923;
+        padding: 20px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        max-height: 300px;
+        overflow: auto;
+        &__list_item {
+            border-bottom: 1px solid rgba(255,255,255,.3);
+            cursor: pointer;
+            &:hover {
+                background: rgba(255,255,255,.1);
+            }
+            &__contains {
+                display: flex;
+                flex: 1;
+                align-items: center;
+                gap: 30px;
+                padding: 10px 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,135 @@
+@import "../../../styles/scss.scss";
+@import "../../../styles/colors.scss";
+
+.page {
+    padding: 0px;
+    color: #f6f6f6 !important;
+
+    &__title_bar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &__title {
+            @include fontSize(25px);
+            font-weight: normal;
+        }
+
+        &__subtitle {
+            color: #c9c9c9 !important;
+        }
+    }
+
+    &__fieldsContainer {
+        background: #2F3443;
+        border-radius: 8px;
+
+        &__form {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            margin-top: 20px;
+            gap: 40px;
+            padding-bottom: 40px;
+
+            &__formfield {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                &__label {
+                    @include flexProperties(row, flex-start, center, $fullWidth: true);
+                    gap: 10px;
+                    color: white;
+                    margin-left: 10px;
+
+                    &__image {
+                        height: 18px;
+                        width: 18px;
+                    }
+                }
+
+                &__input {
+                    color: #979797 !important;
+                    border: 1px solid $secondary-bg-color-3 !important;
+                    background: transparent;
+                    outline: none;
+                    padding: 15px;
+                    font-size: 18px;
+                    border-radius: 8px;
+                    width: 100%;
+
+                    option {
+                        background-color: $secondary-bg-color-1;
+                    }
+                }
+
+                &__phoneinput {
+                    border: 1px solid $secondary-bg-color-3 !important;
+                    border-radius: 8px;
+                    padding: 15px;
+                    color: #979797 !important;
+
+                    input {
+                        color: #979797 !important;
+                        background: transparent;
+                        outline: none;
+                        font-size: 18px;
+                        border: none;
+                    }
+
+                    option {
+                        background-color: $secondary-bg-color-1;
+                        color: #c2c2c2;
+                    }
+                }
+            }
+
+            &__cancel_btn {
+                @include normalThemeButton(16px, 10px);
+                @include fontSize(16px);
+                height: 40px;
+                // width: 100%
+            }
+
+            &__submit_btn {
+                @include pinkThemeButton(16px, 10px);
+                @include fontSize(16px);
+                height: 40px;
+            }
+
+
+            &__choose_file {
+                background-color: #dedede !important;
+                background: #dedede !important;
+                padding: 10px;
+                width: 100%;
+                color: #2F3443 !important;
+                border-radius: 8px;
+
+                &:hover {
+                    background-color: #c0bcbc !important;
+                    background: #c0bcbc !important;
+                }
+            }
+
+            &__upload {
+                padding: 10px;
+                width: 100%;
+                border-radius: 8px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .page {
+        &__fieldsContainer {
+            &__search_container {
+                width: 100%;
+
+                &__search_icon {}
+            }
+        }
+    }
+}

@@ -1,0 +1,203 @@
+@import "../../styles/scss.scss";
+@import "../../styles/colors.scss";
+
+.page {
+    margin-top: 20px;
+
+    &__new_music {
+        &__main {
+            @include flexProperties(column, flex-start, flex-start, $fullWidth: true);
+            margin-top: 20px;
+            gap: 20px;
+
+            &__form {
+                @include flexProperties(column, flex-start, flex-start, $fullWidth: true);
+                gap: 30px;
+
+                &__form_fields {
+                    @include flexProperties(row, flex-start, center, $fullWidth: true);
+                    gap: 20px;
+
+                    &__input {
+                        border: 0px solid $secondary-bg-color-3;
+                        background: transparent;
+                        // padding: 8px 15px;
+                        padding: 8px;
+                        color: $tablecell-color;
+                        border-radius: 4px;
+                        @include fontSize(16px);
+                        // min-width: 165px;
+                        min-width: 100px;
+                        height: 40px;
+                        text-align: center;
+                        background-color: #444B5D;
+
+                        &:focus {
+                            outline: $secondary-bg-color-3 solid 2px !important;
+                        }
+                        &::-webkit-inner-spin-button {
+                            -webkit-appearance: none;
+                            margin: 0;
+                        }
+                    }
+
+                    &__select {
+                        border: 0px solid $secondary-bg-color-3;
+                        background: transparent;
+                        padding: 8px 15px;
+                        color: $tablecell-color;
+                        border-radius: 4px;
+                        @include fontSize(16px);
+                        // min-width: 165px;
+                        min-width: 100px;
+                        height: 40px;
+                        background-color: #444B5D;
+
+                        option {
+                            background-color: $secondary-bg-color-1;
+                        }
+
+                        &:focus {
+                            outline: $secondary-bg-color-3 solid 2px !important;
+                        }
+                    }
+                }
+
+                &__button {
+                    background: $secondary-bg-color-3 !important;
+                    color: $base-text-color !important;
+                    border-radius: 10px !important;
+                    font-size: 1rem !important;
+                    cursor: pointer;
+                    text-transform: capitalize !important;
+                    border: none;
+                    padding: 6px 30px !important;
+                    gap: 10px !important;
+
+                    &:hover {
+                        background: #01a177 !important;
+                    }
+                }
+            }
+        }
+
+    }
+
+    &__music_container {
+        margin-top: 20px;
+
+        &__button_container {
+            @include flexProperties(row, flex-start, center, $fullWidth: true);
+            gap: 30px;
+            
+            &__button {
+                @include normalThemeButton(16px, 10px);
+                @include fontSize();
+                width: fit-content;
+                text-transform: capitalize !important;
+            }
+
+            &__slider_box {
+                @include flexProperties(column, flex-start, flex-start, $fullWidth: true);
+                width: 100%;
+
+                &__title {
+                    @include fontSize(24px);
+                }
+
+                &__slider {
+                    @include flexProperties(row, flex-start, center, $fullWidth: true);
+                    gap: 20px;
+                    width: 100%;
+
+                    &__text {
+                        color: $base-text-color;
+                        @include fontSize(14px);
+                        width: 100px;
+                    }
+
+                }
+            }
+        }
+    }
+
+    &__music_details {
+        margin-top: 20px;
+
+        &__main_container {
+            @include flexProperties(column, center, flex-end, $fullWidth: false);
+            gap: 20px;
+
+            &__box {
+                @include flexProperties(row, flex-end, center, $fullWidth: false);
+                gap: 10px;
+
+                &__details {
+                    @include flexProperties(row, center, center, $fullWidth: true);
+                    gap: 5px;
+                    border: 2px solid $secondary-bg-color-3;
+                    padding: 8px 30px;
+                    border-radius: 8px;
+                    min-width: 200px;
+                    flex-wrap: wrap;
+
+                    &__text {
+                        text-transform: capitalize;
+                        letter-spacing: 2px;
+                        @include fontSize(16px);
+                    }
+
+                }
+
+                &__actions {
+                    @include flexProperties(row, space-between, center, $fullWidth: true);
+                    // max-width: 100px;
+                    width: 90px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 467px) {
+    .page {
+        &__music_container {
+            &__button_container {
+                @include flexProperties(column, flex-start, flex-start, $fullWidth: true);
+
+                &__button {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .page {
+        &__new_music {
+            &__main {
+                &__form {
+                    width: 100%;
+
+                    &__form_fields {
+                        @include flexProperties(column, flex-start, flex-start, $fullWidth: true);
+                        width: 100%;
+
+                        &__input {
+                            width: 100%;
+                        }
+
+                        &__select {
+                            width: 100%;
+                        }
+                    }
+
+                    &__button {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
