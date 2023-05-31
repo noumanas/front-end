@@ -28,11 +28,11 @@ const GenreGraph = ({ artist }) => {
             <Grid>
               <Box>
                 <Stack
-                  direction="row"
-                  flexWrap={"wrap"}
-                  alignContent="center"
-                  alignItems="center"
-                  spacing={1}
+                   direction="row"
+                   flexWrap={"wrap"}
+                   alignContent="center"
+                   alignItems="center"
+                   sx={{ margin: "5px 0px 5px 0px"}}
                 >
                   {artist?.genres.length > 0 ? (
                     artist?.genres.map((genres, index) => {
@@ -41,8 +41,8 @@ const GenreGraph = ({ artist }) => {
                         className={classess.page__banner__conatiner__chip}
                           key={index}
                           label={genres}
-                          // color="primary"
-                          sx={{ color: "#fff" }}
+                          color="primary"
+                          sx={{ color: "#fff" ,margin: "5px 0px 5px 0px"}}
                         ></Chip>
                       );
                     })
@@ -55,8 +55,8 @@ const GenreGraph = ({ artist }) => {
                             ? artist?.chartmetric?.genres?.primary[0]?.name
                             : artist?.chartmetric?.genres?.primary?.name
                         }
-                        // color="primary"
-                        sx={{ color: "#fff" }}
+                        color="primary"
+                        sx={{ color: "#fff",margin: "5px 0px 5px 0px" }}
                       ></Chip>
                       <Chip
                       className={classess.page__banner__conatiner__chip}
@@ -65,8 +65,8 @@ const GenreGraph = ({ artist }) => {
                             ? artist?.chartmetric?.genres?.secondary[0]?.name
                             : artist?.chartmetric?.genres?.secondary?.name
                         }
-                        // color="primary"
-                        sx={{ color: "#fff" }}
+                        color="primary"
+                        sx={{ color: "#fff",margin: "5px 0px 5px 0px" }}
                       ></Chip>
                     </>
                   )}
