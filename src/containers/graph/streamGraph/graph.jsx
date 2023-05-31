@@ -41,7 +41,7 @@ const GenreGraph = ({ artist }) => {
                         className={classess.page__banner__conatiner__chip}
                           key={index}
                           label={genres}
-                          color="primary"
+                          // color="primary"
                           sx={{ color: "#fff" }}
                         ></Chip>
                       );
@@ -55,7 +55,7 @@ const GenreGraph = ({ artist }) => {
                             ? artist?.chartmetric?.genres?.primary[0]?.name
                             : artist?.chartmetric?.genres?.primary?.name
                         }
-                        color="primary"
+                        // color="primary"
                         sx={{ color: "#fff" }}
                       ></Chip>
                       <Chip
@@ -65,7 +65,7 @@ const GenreGraph = ({ artist }) => {
                             ? artist?.chartmetric?.genres?.secondary[0]?.name
                             : artist?.chartmetric?.genres?.secondary?.name
                         }
-                        color="primary"
+                        // color="primary"
                         sx={{ color: "#fff" }}
                       ></Chip>
                     </>
