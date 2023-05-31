@@ -38,32 +38,35 @@ const GenreGraph = ({ artist }) => {
                     artist?.genres.map((genres, index) => {
                       return (
                         <Chip
+                        className={classess.page__banner__conatiner__chip}
                           key={index}
                           label={genres}
                           color="primary"
-                          sx={{ color: "#fff"}}
+                          sx={{ color: "#fff" }}
                         ></Chip>
                       );
                     })
                   ) : (
                     <>
                       <Chip
+                      className={classess.page__banner__conatiner__chip}
                         label={
                           Array.isArray(artist?.chartmetric?.genres?.primary)
                             ? artist?.chartmetric?.genres?.primary[0]?.name
                             : artist?.chartmetric?.genres?.primary?.name
                         }
                         color="primary"
-                        sx={{ color: "#fff"}}
+                        sx={{ color: "#fff" }}
                       ></Chip>
                       <Chip
+                      className={classess.page__banner__conatiner__chip}
                         label={
                           Array.isArray(artist?.chartmetric?.genres?.secondary)
                             ? artist?.chartmetric?.genres?.secondary[0]?.name
                             : artist?.chartmetric?.genres?.secondary?.name
                         }
                         color="primary"
-                        sx={{ color: "#fff"}}
+                        sx={{ color: "#fff" }}
                       ></Chip>
                     </>
                   )}
