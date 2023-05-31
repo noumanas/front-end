@@ -32,7 +32,7 @@ const GenreGraph = ({ artist }) => {
                    flexWrap={"wrap"}
                    alignContent="center"
                    alignItems="center"
-                   sx={{ margin: "5px 0px 5px 0px"}}
+                   sx={{ margin: "5px 5px 5px 5px"}}
                 >
                   {artist?.genres.length > 0 ? (
                     artist?.genres.map((genres, index) => {
@@ -42,7 +42,7 @@ const GenreGraph = ({ artist }) => {
                           key={index}
                           label={genres}
                           color="primary"
-                          sx={{ color: "#fff" ,margin: "5px 0px 5px 0px"}}
+                          sx={{ color: "#fff" ,margin: "5px 5px 5px 5px"}}
                         ></Chip>
                       );
                     })
@@ -56,7 +56,7 @@ const GenreGraph = ({ artist }) => {
                             : artist?.chartmetric?.genres?.primary?.name
                         }
                         color="primary"
-                        sx={{ color: "#fff",margin: "5px 0px 5px 0px" }}
+                        sx={{ color: "#fff",margin: "5px 5px 5px 5px" }}
                       ></Chip>
                       <Chip
                       className={classess.page__banner__conatiner__chip}
@@ -66,7 +66,7 @@ const GenreGraph = ({ artist }) => {
                             : artist?.chartmetric?.genres?.secondary?.name
                         }
                         color="primary"
-                        sx={{ color: "#fff",margin: "5px 0px 5px 0px" }}
+                        sx={{ color: "#fff",margin: "5px 5px 5px 5px" }}
                       ></Chip>
                     </>
                   )}
