@@ -41,7 +41,7 @@ const GenreGraph = ({ artist }) => {
                           key={index}
                           label={genres}
                           color="primary"
-                          sx={{ color: "#fff", margin: "5px 0px 5px 0px" }}
+                          sx={{ color: "#fff"}}
                         ></Chip>
                       );
                     })
@@ -54,7 +54,7 @@ const GenreGraph = ({ artist }) => {
                             : artist?.chartmetric?.genres?.primary?.name
                         }
                         color="primary"
-                        sx={{ color: "#fff", margin: "5px 0px 5px 0px" }}
+                        sx={{ color: "#fff"}}
                       ></Chip>
                       <Chip
                         label={
@@ -63,7 +63,7 @@ const GenreGraph = ({ artist }) => {
                             : artist?.chartmetric?.genres?.secondary?.name
                         }
                         color="primary"
-                        sx={{ color: "#fff", margin: "5px 0px 5px 0px" }}
+                        sx={{ color: "#fff"}}
                       ></Chip>
                     </>
                   )}
